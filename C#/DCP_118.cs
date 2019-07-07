@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*Given a sorted list of integers, square the elements and give the output in sorted order.
+For example, given[-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].*/
+
 namespace dcp_118
 {
     class Program
@@ -11,13 +14,12 @@ namespace dcp_118
         static void Main(string[] args)
         {
             int[] initial = new int[5] { -9, -2, 0, 2, 3 };
-            int helper = 0;
 
             for (int i = 0; i < initial.Length; i++)
             {
-                helper = initial[i] * initial[i];
+
                 initial[i] = initial[i] * initial[i];
-                
+
             }
             Array.Sort(initial);
             foreach (var item in initial)
